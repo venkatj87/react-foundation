@@ -1,0 +1,22 @@
+#Parecel:
+Parcel is bundler library that helps to create all code in to bundle minify in to compressed file.
+
+# What are the parcel features?
+    parcel give many modules
+    - Dev Build
+    - Gives local Server 
+    - HMR hot module replacement
+    - File watching algorithm written in c++
+    - It gives faster builds by cacheing
+    - Image optimisation
+    - Minification of the files.
+
+# Trasitive dependancy:
+When you install npn package It will dependancy that have own dependancies. this is called Trasitive dependancies.
+
+# What is npx?
+where as npm use to install package if you want to install a package can use npx
+
+# why import and export error when run javscript file used the import statement
+Normally browser treats javascript file as normal js file until you specify it is Module where we used import statment
+

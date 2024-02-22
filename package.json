@@ -1,0 +1,27 @@
+{
+  "name": "react-foundation",
+  "version": "1.0.0",
+  "description": "I am learning react finally for foundation level. I will learn this time fully without distract with anything. This is like maala for 40 days. I will do it with dedication and with consistency.",
+  "main": "App.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/venkatj87/react-foundation.git"
+  },
+  "author": "Venkat Jammalamudi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/venkatj87/react-foundation/issues"
+  },
+  "homepage": "https://github.com/venkatj87/react-foundation#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
