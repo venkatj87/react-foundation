@@ -3,6 +3,7 @@ Parcel is bundler library that helps to create all code in to bundle minify in t
 
 # What are the parcel features?
     parcel give many modules
+    - Zero config
     - Dev Build
     - Gives local Server 
     - HMR hot module replacement
@@ -10,6 +11,10 @@ Parcel is bundler library that helps to create all code in to bundle minify in t
     - It gives faster builds by cacheing
     - Image optimisation
     - Minification of the files.
+    - Consistence hashing?
+    - Code spliting?
+    - Diffrential bundling?
+    - Tree shaking algorithm.
 
 # Trasitive dependancy:
 When you install npn package It will dependancy that have own dependancies. this is called Trasitive dependancies.

@@ -142,11 +142,11 @@
       this[globalName] = mainExports;
     }
   }
-})({"jJWSB":[function(require,module,exports) {
+})({"lrYbO":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SECURE = false;
+var HMR_SECURE = true;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 module.bundle.HMR_BUNDLE_ID = "f8a609f57826abd7";
 "use strict";
@@ -26486,6 +26486,6 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}]},["jJWSB","1xC6H","2Ew96"], "2Ew96", "parcelRequired05b")
+},{}]},["lrYbO","1xC6H","2Ew96"], "2Ew96", "parcelRequired05b")
 
 //# sourceMappingURL=index.7826abd7.js.map
