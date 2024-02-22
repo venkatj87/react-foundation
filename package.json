@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "I am learning react finally for foundation level. I will learn this time fully without distract with anything. This is like maala for 40 days. I will do it with dedication and with consistency.",
   "scripts": {
-    "test": "npm run test"
+    "test": "npm run test",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "browserlist": [
+    "last 2 versions"
+  ]
 }
