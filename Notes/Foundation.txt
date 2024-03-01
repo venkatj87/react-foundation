@@ -1,0 +1,8 @@
+# What is transpile
+Transpilling is a method to convert the code that javascript engine understand.
+
+React Functional component is just normal javascript funtion with return some jsx.
+Everything in React is component.
+
+# Component Composition
+A component render in to another is called Componnet composition.

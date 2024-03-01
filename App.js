@@ -1,26 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const element = React.createElement (
-    'h2', 
-    {id: "heading"},
-    React.createElement (
-        "span", 
-        {},
-        [
-            React.createElement (
-                "h1", 
-                {},
-                "Some h1 tag inside span"
-            ),
-            React.createElement (
-                "h2", 
-                {},
-                "Some h2 tag inside span"
-            )
-        ]
-    )
-);
+const jsxElement = (
+    <h1>World of React.</h1>
+)
+
+const HeadingComponent = () => <h1>Heading Component</h1>;
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(element);
-console.log(element)
+root.render(<HeadingComponent/>);
