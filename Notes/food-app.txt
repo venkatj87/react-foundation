@@ -1,0 +1,2 @@
+# What is config driven UI?
+- a config that drives the UI is called to Config drive UI

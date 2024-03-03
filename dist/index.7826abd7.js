@@ -2952,36 +2952,820 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-const jsxElement = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-    children: "World of React."
-}, void 0, false, {
-    fileName: "App.js",
-    lineNumber: 5,
-    columnNumber: 5
-}, undefined);
-const HeadingComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "Heading Component"
-    }, void 0, false, {
+var _headerComponent = require("./Components/Header/HeaderComponent");
+var _headerComponentDefault = parcelHelpers.interopDefault(_headerComponent);
+var _bodyComponent = require("./Components/Body/BodyComponent");
+var _bodyComponentDefault = parcelHelpers.interopDefault(_bodyComponent);
+/**
+ * Header
+ * - Logo
+ * - Nav Items
+ * Body
+ * - Search item
+ * - Food Item card component
+ * Footer
+ * - Copyrights
+ * - Desclimer
+ *
+ */ const AppComponent = ()=>{
+    const restoData = [
+        {
+            "info": {
+                "id": "195336",
+                "name": "Hayath Restaurant",
+                "cloudinaryImageId": "sv41lscaczyrkpsfmyov",
+                "locality": "Medak Road",
+                "areaName": "Naseer Nagar",
+                "costForTwo": "\u20B9299 for two",
+                "cuisines": [
+                    "Biryani",
+                    "Mughlai",
+                    "Kebabs",
+                    "Hyderabadi",
+                    "Chinese"
+                ],
+                "avgRating": 4.3,
+                "parentId": "94663",
+                "avgRatingString": "4.3",
+                "totalRatingsString": "5K+",
+                "sla": {
+                    "deliveryTime": 25,
+                    "lastMileTravel": 1.2,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "20-25 mins",
+                    "lastMileTravelString": "1.2 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2024-03-03 23:30:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
+                            "description": "OnlyOnSwiggy"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "OnlyOnSwiggy",
+                                        "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "\u20B9125 OFF",
+                    "subHeader": "ABOVE \u20B9249",
+                    "discountTag": "FLAT DEAL"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "badgeType": "BADGE_TYPE_OFFER_PACK",
+                    "offerSubText": "with offer pack",
+                    "nonSwiggyOneFreedelMessage": "FREE DELIVERY"
+                },
+                "orderabilityCommunication": {
+                    "title": {},
+                    "subTitle": {},
+                    "message": {},
+                    "customIcon": {}
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+                "context": "seo-data-043e727b-0e0d-47f3-9747-e04758e9273d"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/restaurants/hayath-restaurant-medak-road-naseer-nagar-siddipet-195336",
+                "text": "RESTAURANT_MENU",
+                "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+        },
+        {
+            "info": {
+                "id": "362166",
+                "name": "Ruchis Biryani Centre",
+                "cloudinaryImageId": "vdrgbh1eqcxjjlsgbzqt",
+                "locality": "Hanuman Nager",
+                "areaName": "Shivaji Nagar",
+                "costForTwo": "\u20B9299 for two",
+                "cuisines": [
+                    "Biryani",
+                    "Chinese",
+                    "North Indian",
+                    "Beverages"
+                ],
+                "avgRating": 4.1,
+                "parentId": "172991",
+                "avgRatingString": "4.1",
+                "totalRatingsString": "500+",
+                "sla": {
+                    "deliveryTime": 28,
+                    "lastMileTravel": 2.4,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "25-30 mins",
+                    "lastMileTravelString": "2.4 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2024-03-03 22:45:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "10% OFF",
+                    "subHeader": "UPTO \u20B940"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "badgeType": "BADGE_TYPE_OFFER_PACK",
+                    "offerSubText": "with offer pack",
+                    "nonSwiggyOneFreedelMessage": "FREE DELIVERY"
+                },
+                "orderabilityCommunication": {
+                    "title": {},
+                    "subTitle": {},
+                    "message": {},
+                    "customIcon": {}
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+                "context": "seo-data-043e727b-0e0d-47f3-9747-e04758e9273d"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/restaurants/ruchis-biryani-centre-hanuman-nager-shivaji-nagar-siddipet-362166",
+                "text": "RESTAURANT_MENU",
+                "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+        },
+        {
+            "info": {
+                "id": "199002",
+                "name": "Akshaya Family Restaurantd",
+                "cloudinaryImageId": "z9bmqibo1znce3zer57r",
+                "locality": "Bus Stop Road",
+                "areaName": "Shivaji Nagar",
+                "costForTwo": "\u20B9125 for two",
+                "cuisines": [
+                    "Biryani",
+                    "Chinese",
+                    "North Indian",
+                    "Tandoor",
+                    "Mughlai"
+                ],
+                "avgRating": 4.3,
+                "parentId": "453358",
+                "avgRatingString": "4.3",
+                "totalRatingsString": "1K+",
+                "sla": {
+                    "deliveryTime": 31,
+                    "lastMileTravel": 2.1,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "30-35 mins",
+                    "lastMileTravelString": "2.1 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2024-03-03 23:00:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
+                            "description": "OnlyOnSwiggy"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "OnlyOnSwiggy",
+                                        "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "10% OFF",
+                    "subHeader": "UPTO \u20B940"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "badgeType": "BADGE_TYPE_OFFER_PACK",
+                    "offerSubText": "with offer pack",
+                    "nonSwiggyOneFreedelMessage": "FREE DELIVERY"
+                },
+                "orderabilityCommunication": {
+                    "title": {},
+                    "subTitle": {},
+                    "message": {},
+                    "customIcon": {}
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+                "context": "seo-data-043e727b-0e0d-47f3-9747-e04758e9273d"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/restaurants/akshaya-family-restaurantd-bus-stop-road-shivaji-nagar-siddipet-199002",
+                "text": "RESTAURANT_MENU",
+                "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+        },
+        {
+            "info": {
+                "id": "195342",
+                "name": "SLN Fast Food Centre",
+                "cloudinaryImageId": "vsepvp3g06dba82d0ng9",
+                "locality": "Medak Road",
+                "areaName": "Mustabad X Road",
+                "costForTwo": "\u20B9199 for two",
+                "cuisines": [
+                    "Chinese",
+                    "Biryani",
+                    "Beverages"
+                ],
+                "avgRating": 4,
+                "parentId": "189480",
+                "avgRatingString": "4.0",
+                "totalRatingsString": "100+",
+                "sla": {
+                    "deliveryTime": 25,
+                    "lastMileTravel": 0.9,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "20-25 mins",
+                    "lastMileTravelString": "0.9 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2024-03-03 22:30:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "20% OFF",
+                    "subHeader": "UPTO \u20B950"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "badgeType": "BADGE_TYPE_OFFER_PACK",
+                    "offerSubText": "with offer pack",
+                    "nonSwiggyOneFreedelMessage": "FREE DELIVERY"
+                },
+                "orderabilityCommunication": {
+                    "title": {},
+                    "subTitle": {},
+                    "message": {},
+                    "customIcon": {}
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+                "context": "seo-data-043e727b-0e0d-47f3-9747-e04758e9273d"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/restaurants/sln-fast-food-centre-medak-road-mustabad-x-road-siddipet-195342",
+                "text": "RESTAURANT_MENU",
+                "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+        },
+        {
+            "info": {
+                "id": "738390",
+                "name": "MY3 Grill & Restaurant",
+                "cloudinaryImageId": "51a9bdbd13ef9b4a8431d5c785c00a84",
+                "locality": "Siddipet town",
+                "areaName": "Hanuman Nager",
+                "costForTwo": "\u20B9299 for two",
+                "cuisines": [
+                    "Biryani",
+                    "Chinese",
+                    "North Indian",
+                    "Desserts",
+                    "Beverages"
+                ],
+                "avgRating": 4.1,
+                "parentId": "438422",
+                "avgRatingString": "4.1",
+                "totalRatingsString": "100+",
+                "sla": {
+                    "deliveryTime": 29,
+                    "lastMileTravel": 3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "25-30 mins",
+                    "lastMileTravelString": "3.0 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2024-03-03 23:30:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
+                            "description": "OnlyOnSwiggy"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "OnlyOnSwiggy",
+                                        "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "badgeType": "BADGE_TYPE_OFFER_PACK",
+                    "offerSubText": "with offer pack",
+                    "nonSwiggyOneFreedelMessage": "FREE DELIVERY"
+                },
+                "orderabilityCommunication": {
+                    "title": {},
+                    "subTitle": {},
+                    "message": {},
+                    "customIcon": {}
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+                "context": "seo-data-043e727b-0e0d-47f3-9747-e04758e9273d"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/restaurants/my3-grill-and-restaurant-town-hanuman-nager-siddipet-738390",
+                "text": "RESTAURANT_MENU",
+                "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+        },
+        {
+            "info": {
+                "id": "715958",
+                "name": "RS Cloud Kitchen",
+                "cloudinaryImageId": "c99965eeb99faed4e5950ae5646ae7c1",
+                "locality": "Gajwel",
+                "areaName": "Hanuman Nager",
+                "costForTwo": "\u20B9199 for two",
+                "cuisines": [
+                    "Biryani",
+                    "Chinese",
+                    "North Indian",
+                    "Pizzas",
+                    "Burgers",
+                    "Beverages"
+                ],
+                "avgRating": 3.7,
+                "parentId": "398151",
+                "avgRatingString": "3.7",
+                "totalRatingsString": "20+",
+                "sla": {
+                    "deliveryTime": 36,
+                    "lastMileTravel": 2.3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "35-40 mins",
+                    "lastMileTravelString": "2.3 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2024-03-03 23:00:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "40% OFF",
+                    "subHeader": "UPTO \u20B980"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "badgeType": "BADGE_TYPE_OFFER_PACK",
+                    "offerSubText": "with offer pack",
+                    "nonSwiggyOneFreedelMessage": "FREE DELIVERY"
+                },
+                "orderabilityCommunication": {
+                    "title": {},
+                    "subTitle": {},
+                    "message": {},
+                    "customIcon": {}
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+                "context": "seo-data-043e727b-0e0d-47f3-9747-e04758e9273d"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/restaurants/rs-cloud-kitchen-gajwel-hanuman-nager-siddipet-715958",
+                "text": "RESTAURANT_MENU",
+                "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+        },
+        {
+            "info": {
+                "id": "219069",
+                "name": "Athithi Delight Multi Cuisine Restaurant",
+                "cloudinaryImageId": "vdngkbeftf4fndlp8slx",
+                "locality": "Hyderabad Road",
+                "areaName": "Hanuman Nager",
+                "costForTwo": "\u20B9300 for two",
+                "cuisines": [
+                    "Indian"
+                ],
+                "avgRating": 4.3,
+                "parentId": "37511",
+                "avgRatingString": "4.3",
+                "totalRatingsString": "1K+",
+                "sla": {
+                    "deliveryTime": 29,
+                    "lastMileTravel": 3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "25-30 mins",
+                    "lastMileTravelString": "3.0 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2024-03-03 22:30:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "20% OFF",
+                    "subHeader": "UPTO \u20B950"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "badgeType": "BADGE_TYPE_OFFER_PACK",
+                    "offerSubText": "with offer pack",
+                    "nonSwiggyOneFreedelMessage": "FREE DELIVERY"
+                },
+                "orderabilityCommunication": {
+                    "title": {},
+                    "subTitle": {},
+                    "message": {},
+                    "customIcon": {}
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+                "context": "seo-data-043e727b-0e0d-47f3-9747-e04758e9273d"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/restaurants/athithi-delight-multi-cuisine-restaurant-hyderabad-road-hanuman-nager-siddipet-219069",
+                "text": "RESTAURANT_MENU",
+                "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+        },
+        {
+            "info": {
+                "id": "393834",
+                "name": "AFC Restaurant",
+                "cloudinaryImageId": "qpberkhz26biwfb9pquz",
+                "locality": "Govt Hospital Road",
+                "areaName": "Opp Mini Stadim",
+                "costForTwo": "\u20B9299 for two",
+                "cuisines": [
+                    "Biryani",
+                    "Chinese",
+                    "North Indian",
+                    "Tandoor",
+                    "Beverages"
+                ],
+                "avgRating": 4,
+                "parentId": "27404",
+                "avgRatingString": "4.0",
+                "totalRatingsString": "1K+",
+                "sla": {
+                    "deliveryTime": 22,
+                    "lastMileTravel": 0.5,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "20-25 mins",
+                    "lastMileTravelString": "0.5 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2024-03-03 22:50:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "60% OFF",
+                    "subHeader": "UPTO \u20B9120"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "badgeType": "BADGE_TYPE_OFFER_PACK",
+                    "offerSubText": "with offer pack",
+                    "nonSwiggyOneFreedelMessage": "FREE DELIVERY"
+                },
+                "orderabilityCommunication": {
+                    "title": {},
+                    "subTitle": {},
+                    "message": {},
+                    "customIcon": {}
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+                "context": "seo-data-043e727b-0e0d-47f3-9747-e04758e9273d"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/restaurants/afc-restaurant-govt-hospital-road-opp-mini-stadim-siddipet-393834",
+                "text": "RESTAURANT_MENU",
+                "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+        },
+        {
+            "info": {
+                "id": "744747",
+                "name": "Madina Hotel",
+                "cloudinaryImageId": "f780ed3e2723fa5e0c72b0552962fca7",
+                "locality": "Kadarpura",
+                "areaName": "Hanuman Nager",
+                "costForTwo": "\u20B9199 for two",
+                "cuisines": [
+                    "Indian",
+                    "North Indian",
+                    "Biryani",
+                    "Chinese",
+                    "Desserts",
+                    "Beverages"
+                ],
+                "avgRating": 4.1,
+                "parentId": "128748",
+                "avgRatingString": "4.1",
+                "totalRatingsString": "100+",
+                "sla": {
+                    "deliveryTime": 23,
+                    "lastMileTravel": 1.2,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "20-25 mins",
+                    "lastMileTravelString": "1.2 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2024-03-03 23:59:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
+                            "description": "OnlyOnSwiggy"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "OnlyOnSwiggy",
+                                        "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "\u20B9125 OFF",
+                    "subHeader": "ABOVE \u20B9249",
+                    "discountTag": "FLAT DEAL"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "badgeType": "BADGE_TYPE_OFFER_PACK",
+                    "offerSubText": "with offer pack",
+                    "nonSwiggyOneFreedelMessage": "FREE DELIVERY"
+                },
+                "orderabilityCommunication": {
+                    "title": {},
+                    "subTitle": {},
+                    "message": {},
+                    "customIcon": {}
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {}
+            },
+            "analytics": {
+                "context": "seo-data-043e727b-0e0d-47f3-9747-e04758e9273d"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/restaurants/madina-hotel-kadarpura-hanuman-nager-siddipet-744747",
+                "text": "RESTAURANT_MENU",
+                "type": "WEBLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+        }
+    ];
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerComponentDefault.default), {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 781,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyComponentDefault.default), {
+                data: restoData
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 782,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 8,
-        columnNumber: 32
+        lineNumber: 780,
+        columnNumber: 9
     }, undefined);
-_c = HeadingComponent;
+};
+_c = AppComponent;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppComponent, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 11,
+    lineNumber: 788,
     columnNumber: 13
 }, undefined));
 var _c;
-$RefreshReg$(_c, "HeadingComponent");
+$RefreshReg$(_c, "AppComponent");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./Components/Header/HeaderComponent":"gyhl8","./Components/Body/BodyComponent":"fh9uX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27168,7 +27952,100 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"gkKU3":[function(require,module,exports) {
+},{}],"gyhl8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$683f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$683f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _indexCss = require("./index.css");
+// const logo = new URL('logo.png', './images/logo.png');
+// console.log(logo);
+const HeaderComponent = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "logo-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    alt: "Logo",
+                    className: "logo",
+                    src: "images/logo.png"
+                }, void 0, false, {
+                    fileName: "Components/Header/HeaderComponent.jsx",
+                    lineNumber: 9,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
+                fileName: "Components/Header/HeaderComponent.jsx",
+                lineNumber: 8,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "nav-items-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Home"
+                        }, void 0, false, {
+                            fileName: "Components/Header/HeaderComponent.jsx",
+                            lineNumber: 13,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "About Us"
+                        }, void 0, false, {
+                            fileName: "Components/Header/HeaderComponent.jsx",
+                            lineNumber: 14,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Contact Us"
+                        }, void 0, false, {
+                            fileName: "Components/Header/HeaderComponent.jsx",
+                            lineNumber: 15,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Cart"
+                        }, void 0, false, {
+                            fileName: "Components/Header/HeaderComponent.jsx",
+                            lineNumber: 16,
+                            columnNumber: 21
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "Components/Header/HeaderComponent.jsx",
+                    lineNumber: 12,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
+                fileName: "Components/Header/HeaderComponent.jsx",
+                lineNumber: 11,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "Components/Header/HeaderComponent.jsx",
+        lineNumber: 7,
+        columnNumber: 9
+    }, undefined);
+};
+_c = HeaderComponent;
+exports.default = HeaderComponent;
+var _c;
+$RefreshReg$(_c, "HeaderComponent");
+
+  $parcel$ReactRefreshHelpers$683f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./index.css":"72Bre","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"72Bre":[function() {},{}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27336,6 +28213,159 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}]},["jJWSB","1xC6H","2Ew96"], "2Ew96", "parcelRequired05b")
+},{"7422ead32dcc1e6b":"786KC"}],"fh9uX":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$292f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$292f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _restroCardComponent = require("./RestroCardComponent");
+var _restroCardComponentDefault = parcelHelpers.interopDefault(_restroCardComponent);
+var _indexCss = require("./index.css");
+const BodyComponent = ({ data })=>{
+    console.log(data);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "body-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search"
+            }, void 0, false, {
+                fileName: "Components/Body/BodyComponent.jsx",
+                lineNumber: 8,
+                columnNumber: 13
+            }, undefined),
+            data.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restroCardComponentDefault.default), {
+                    item: item.info
+                }, item.info.id, false, {
+                    fileName: "Components/Body/BodyComponent.jsx",
+                    lineNumber: 13,
+                    columnNumber: 21
+                }, undefined))
+        ]
+    }, void 0, true, {
+        fileName: "Components/Body/BodyComponent.jsx",
+        lineNumber: 7,
+        columnNumber: 9
+    }, undefined);
+};
+_c = BodyComponent;
+exports.default = BodyComponent;
+var _c;
+$RefreshReg$(_c, "BodyComponent");
+
+  $parcel$ReactRefreshHelpers$292f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./RestroCardComponent":"hf5kj","./index.css":"9liNg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hf5kj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b6b1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b6b1.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const RestroCardComponent = ({ item })=>{
+    const baseImageUrl = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+    const { name, cuisines, sla, avgRating, areaName, costForTwo } = item;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "resto-card-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "resto-img-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    alt: "Restaurent Image",
+                    className: "restrua-image",
+                    src: baseImageUrl + item.cloudinaryImageId
+                }, void 0, false, {
+                    fileName: "Components/Body/RestroCardComponent.jsx",
+                    lineNumber: 7,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
+                fileName: "Components/Body/RestroCardComponent.jsx",
+                lineNumber: 6,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "resto-meta",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                        className: "reto-name",
+                        children: item.name
+                    }, void 0, false, {
+                        fileName: "Components/Body/RestroCardComponent.jsx",
+                        lineNumber: 10,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: cuisines.join(", ")
+                    }, void 0, false, {
+                        fileName: "Components/Body/RestroCardComponent.jsx",
+                        lineNumber: 11,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: [
+                            sla.deliveryTime,
+                            " mins"
+                        ]
+                    }, void 0, true, {
+                        fileName: "Components/Body/RestroCardComponent.jsx",
+                        lineNumber: 12,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: avgRating
+                    }, void 0, false, {
+                        fileName: "Components/Body/RestroCardComponent.jsx",
+                        lineNumber: 13,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: areaName
+                    }, void 0, false, {
+                        fileName: "Components/Body/RestroCardComponent.jsx",
+                        lineNumber: 14,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
+                        children: costForTwo
+                    }, void 0, false, {
+                        fileName: "Components/Body/RestroCardComponent.jsx",
+                        lineNumber: 15,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "Components/Body/RestroCardComponent.jsx",
+                lineNumber: 9,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "Components/Body/RestroCardComponent.jsx",
+        lineNumber: 5,
+        columnNumber: 9
+    }, undefined);
+};
+_c = RestroCardComponent;
+exports.default = RestroCardComponent;
+var _c;
+$RefreshReg$(_c, "RestroCardComponent");
+
+  $parcel$ReactRefreshHelpers$b6b1.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9liNg":[function() {},{}]},["jJWSB","1xC6H","2Ew96"], "2Ew96", "parcelRequired05b")
 
 //# sourceMappingURL=index.7826abd7.js.map
