@@ -1,2 +1,8 @@
 # What is config driven UI?
 - a config that drives the UI is called to Config drive UI
+
+# 
+- React use Reconcilliation algorithm also known as React Fiber
+- React uses the Virtual DOM means It is a object representation of a actual DOM
+# What is Diff algorithm?
+- React find the difference better current DOM and updated DOM and rerender the DOM.

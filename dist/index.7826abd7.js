@@ -27963,8 +27963,6 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _indexCss = require("./index.css");
-// const logo = new URL('logo.png', './images/logo.png');
-// console.log(logo);
 const HeaderComponent = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
@@ -27974,15 +27972,15 @@ const HeaderComponent = ()=>{
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     alt: "Logo",
                     className: "logo",
-                    src: "images/logo.png"
+                    src: "./images/logo.png"
                 }, void 0, false, {
                     fileName: "Components/Header/HeaderComponent.jsx",
-                    lineNumber: 9,
+                    lineNumber: 7,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "Components/Header/HeaderComponent.jsx",
-                lineNumber: 8,
+                lineNumber: 6,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27993,45 +27991,45 @@ const HeaderComponent = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "Components/Header/HeaderComponent.jsx",
-                            lineNumber: 13,
+                            lineNumber: 11,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About Us"
                         }, void 0, false, {
                             fileName: "Components/Header/HeaderComponent.jsx",
-                            lineNumber: 14,
+                            lineNumber: 12,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contact Us"
                         }, void 0, false, {
                             fileName: "Components/Header/HeaderComponent.jsx",
-                            lineNumber: 15,
+                            lineNumber: 13,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "Components/Header/HeaderComponent.jsx",
-                            lineNumber: 16,
+                            lineNumber: 14,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "Components/Header/HeaderComponent.jsx",
-                    lineNumber: 12,
+                    lineNumber: 10,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "Components/Header/HeaderComponent.jsx",
-                lineNumber: 11,
+                lineNumber: 9,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "Components/Header/HeaderComponent.jsx",
-        lineNumber: 7,
+        lineNumber: 5,
         columnNumber: 9
     }, undefined);
 };

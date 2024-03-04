@@ -25,3 +25,19 @@ where as npm use to install package if you want to install a package can use npx
 # why import and export error when run javscript file used the import statement
 Normally browser treats javascript file as normal js file until you specify it is Module where we used import statment
 
+# React Key features?
+- Componsition of components
+- Virtual DOM
+- 
+
+# What is useState in React?
+- React useState is hook that return the data passing into useState and an annonmous funtion 
+  It one of the powerful feature of react that maintain local state with in component.
+
+# What are design priceples of React?
+https://legacy.reactjs.org/docs/design-principles.html
+
+# Design system
+Separation of concerns. It follows single responsible priceple.
+
+How micro services 
