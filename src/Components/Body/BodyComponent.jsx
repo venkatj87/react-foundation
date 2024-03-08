@@ -1,25 +1,31 @@
-import { useState } from "react";
 import RestroCardComponent from "./RestroCardComponent"
 import './index.css';
+import useFetchData from "../../utils/useFetchData";
+import useOnlineStatus from "../../utils/useOnlineStatus";
 
 const BodyComponent = ({data}) => {
-    const [filterdData, setFilteredData] = useState(data); 
-    console.log("useState:", useState([]));
-
-    const handleOnClick = () => {
-        const newData = data.filter((item) => item.info.avgRating >= 4 === true);
-        setFilteredData(() => newData);
+    const {filterdData, setFilteredData} = useFetchData([]);
+    const onlineStatus = useOnlineStatus();
+    
+    const handleOnClick = (data) => {
+        const newData = data.filter((item) => item.info.avgRating > 4 === true);
+        setFilteredData(newData);
     }
-
+   
     return (
         <div className="body-container">
             <div className="filter-btn-container">
-                <button onClick={() => handleOnClick()}> Top Rated Restaurents </button>
+                <button onClick={() => handleOnClick(filterdData.length > 0?filterdData:data)}> Top Rated Restaurents </button>
+                <button > {onlineStatus?<span >Online</span>:<span>Offline</span>} </button>
             </div>
             <div className="resto-container">
             {
-                filterdData.length > 0 &&
+                filterdData.length > 0 ?
                 filterdData.map((item) => (
+                    <RestroCardComponent key={item.info.id} item={item.info}/>
+                ))
+                :
+                data.map((item) => (
                     <RestroCardComponent key={item.info.id} item={item.info}/>
                 ))
             }

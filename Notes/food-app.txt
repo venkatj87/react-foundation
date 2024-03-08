@@ -6,3 +6,24 @@
 - React uses the Virtual DOM means It is a object representation of a actual DOM
 # What is Diff algorithm?
 - React find the difference better current DOM and updated DOM and rerender the DOM.
+
+# UseEffect
+If no dependancy array it will call on every rerender.
+If the dependancy array is empty useEffect only called on initial call and just once.
+If the dependancy array have some variables then it will everytime that variable change.
+
+# Link
+React link is super powerful feature the route to different page without refreshing the whole page
+
+# Routing
+There are 2 types of routing
+1 is Client side routing
+2 is Server side routing
+
+# Code spliting
+1. Dynamic bundling
+2. Chunking
+3. Code Splitting
+4. Lazy loading
+5. Dynamic Importing
+6. Ondemand loading

@@ -1,5 +1,10 @@
 #Parecel:
 Parcel is bundler library that helps to create all code in to bundle minify in to compressed file.
+# Code Redability
+- Always write component file start with capital letter
+- Rest of the js files keep in lower case
+- folders name always keep as lower case
+- 
 
 # What are the parcel features?
     parcel give many modules

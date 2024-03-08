@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import HeaderComponent from './Components/Header/HeaderComponent';
-import BodyComponent from './Components/Body/BodyComponent';
-import FooterComponent from './Components/Footer/FooterComponet';
+import HeaderComponent from './components/header/HeaderComponent';
+import BodyComponent from './components/body/BodyComponent';
+import FooterComponent from './components/footer/FooterComponet';
 import './app.css';
 import restoData from './utils/mockData';
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+import AboutUsComponenet from './components/aboutus/AboutUsComponene';
+import Contact from './components/contact/Contact';
+import ErrorComponent from './components/ErrorComponent';
+import RestaurentMenuPage from './components/RestaurentMenu/RestaurentMenuPage';
+
 /**
  * Header
  * - Logo
@@ -17,16 +23,46 @@ import restoData from './utils/mockData';
  * - Desclimer
  *
  */
+
 const AppComponent = () => {
-    
     return (
         <div className='root-container'>
             <HeaderComponent />
-            <BodyComponent data={restoData}/>
+            <Outlet />
             <FooterComponent />
         </div>
     )
 }
 
+const appRouter = createBrowserRouter(
+    [
+        {
+            path: "/",
+            element: <AppComponent />,
+            errorElement: <ErrorComponent />,
+            children: [
+                {
+                    path: "/",
+                    element: <BodyComponent data={restoData}/>
+                },
+                {
+                    path: "/about",
+                    element: <AboutUsComponenet />
+                },
+                {
+                    path: "/contact",
+                    element: <Contact />
+                },
+                {
+                    path: "/restaurent/:resId",
+                    element: <RestaurentMenuPage />
+                }
+            ]
+
+        },
+        
+    ]
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppComponent/>);
+root.render(<RouterProvider router={appRouter} />);
