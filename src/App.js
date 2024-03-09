@@ -1,12 +1,11 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import HeaderComponent from './components/header/HeaderComponent';
 import BodyComponent from './components/body/BodyComponent';
 import FooterComponent from './components/footer/FooterComponet';
-import './app.css';
+import './index.css';
 import restoData from './utils/mockData';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import AboutUsComponenet from './components/aboutus/AboutUsComponene';
 import Contact from './components/contact/Contact';
 import ErrorComponent from './components/ErrorComponent';
 import RestaurentMenuPage from './components/RestaurentMenu/RestaurentMenuPage';
@@ -23,6 +22,8 @@ import RestaurentMenuPage from './components/RestaurentMenu/RestaurentMenuPage';
  * - Desclimer
  *
  */
+
+const AboutUsComponent = lazy(() => import("./components/aboutus/AboutUsComponent.jsx"));
 
 const AppComponent = () => {
     return (
@@ -47,14 +48,14 @@ const appRouter = createBrowserRouter(
                 },
                 {
                     path: "/about",
-                    element: <AboutUsComponenet />
+                    element: <Suspense fallback={<h4>Loading....</h4>}><AboutUsComponent /></Suspense>
                 },
                 {
                     path: "/contact",
                     element: <Contact />
                 },
                 {
-                    path: "/restaurent/:resId",
+                    path: "/restaurents/:resId",
                     element: <RestaurentMenuPage />
                 }
             ]

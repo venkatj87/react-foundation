@@ -20,13 +20,8 @@ const BodyComponent = ({data}) => {
             </div>
             <div className="resto-container">
             {
-                filterdData.length > 0 ?
-                filterdData.map((item) => (
-                    <RestroCardComponent key={item.info.id} item={item.info}/>
-                ))
-                :
-                data.map((item) => (
-                    <RestroCardComponent key={item.info.id} item={item.info}/>
+                filterdData.map((item, index) => (
+                    <RestroCardComponent key={item.info.id+'-'+index} item={item.info}/>
                 ))
             }
             </div>

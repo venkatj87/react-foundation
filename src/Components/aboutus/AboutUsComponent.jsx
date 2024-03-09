@@ -1,4 +1,4 @@
-const AboutUsComponenet = () => {
+const AboutUsComponent = () => {
     return (
         <>
             <h2>About Us Component</h2>
@@ -6,4 +6,4 @@ const AboutUsComponenet = () => {
     )
 }
 
-export default AboutUsComponenet;
+export default AboutUsComponent;

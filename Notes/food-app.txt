@@ -27,3 +27,11 @@ There are 2 types of routing
 4. Lazy loading
 5. Dynamic Importing
 6. Ondemand loading
+
+# List of ways to apply css to React
+- Styled Components
+- Material UI
+- ANT Design
+- Bootstrap
+- Chakra UI
+- Tailwind css
