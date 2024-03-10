@@ -7,12 +7,10 @@ const RestroCardComponent = ({item}) => {
     const {id, name, cuisines, sla, avgRating, areaName, costForTwo} = item;
     return (
         <Link to={"restaurents/"+id}>
-            <div className="resto-card-container">
-                <div className="resto-img-container">
-                    <img alt="Restaurent Image" className="restrua-image" src={CDN_IMAGES_URL+item.cloudinaryImageId} />
-                </div>
-                <div className="resto-meta">
-                    <h4 className="reto-name">{item.name}</h4>
+            <div className="p-4 m-4 w-[250px] bg-gray-100 hover:bg-gray-300 rounded-md">
+                <img alt="Restaurent Image" className="object-fill rounded-md" src={CDN_IMAGES_URL+item.cloudinaryImageId} />
+                <div className="">
+                    <h4 className="font-bold">{name}</h4>
                     <p>{cuisines.join(", ")}</p>
                     <p>{sla.deliveryTime} mins</p>
                     <p>{avgRating}</p>

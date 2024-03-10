@@ -8,7 +8,7 @@ import restoData from './utils/mockData';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import Contact from './components/contact/Contact';
 import ErrorComponent from './components/ErrorComponent';
-import RestaurentMenuPage from './components/RestaurentMenu/RestaurentMenuPage';
+import RestaurantMenuPage from './components/RestaurentMenu/RestaurantMenuPage.jsx';
 
 /**
  * Header
@@ -30,7 +30,7 @@ const AppComponent = () => {
         <div className='root-container'>
             <HeaderComponent />
             <Outlet />
-            <FooterComponent />
+            {/* <FooterComponent /> */}
         </div>
     )
 }
@@ -56,7 +56,7 @@ const appRouter = createBrowserRouter(
                 },
                 {
                     path: "/restaurents/:resId",
-                    element: <RestaurentMenuPage />
+                    element: <RestaurantMenuPage />
                 }
             ]
 

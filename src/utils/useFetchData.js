@@ -10,7 +10,9 @@ const useFetchData = (data) => {
         const restaurents = jsonData.data.cards
         .filter(item => 'gridElements' in item.card.card && 'restaurants' in item.card.card.gridElements.infoWithStyle)
         .flatMap(item => item.card.card.gridElements.infoWithStyle.restaurants);
-        setFilteredData(restaurents);
+        if(restaurents.length > 0) {
+            setFilteredData(restaurents);
+        }
     }
 
     useEffect(() => {
