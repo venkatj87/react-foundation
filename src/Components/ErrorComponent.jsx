@@ -1,10 +1,8 @@
-import * as React from 'react';
 import { useRouteError } from 'react-router-dom';
 
 const ErrorComponent = (props) => {
 
     const err = useRouteError();
-    console.log("eeerr", err);
     return (
         <div>
             <h3> Opps! {err.status}</h3>
@@ -14,4 +12,4 @@ const ErrorComponent = (props) => {
     );
 };
 
-export default ErrorComponent
+export default ErrorComponent;
