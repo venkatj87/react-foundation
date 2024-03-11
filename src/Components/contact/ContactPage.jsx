@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const Contact = (props) => {
+const ContactPage = (props) => {
     return (
         <div>
             <h2>Contact Us</h2>
@@ -8,4 +8,4 @@ const Contact = (props) => {
     );
 };
 
-export default Contact;
+export default ContactPage;

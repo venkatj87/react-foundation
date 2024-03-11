@@ -3,7 +3,7 @@ import useFetchMenu from '../../utils/useFetchMenu';
 import { useParams } from 'react-router-dom';
 import RestaurantCategory from './RestaurantCategory';
 
-function RestaurantMenuPage(props) {
+const RestaurantMenuPage = (props) => {
     
     const params = useParams();
 

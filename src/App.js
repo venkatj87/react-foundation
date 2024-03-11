@@ -5,8 +5,8 @@ import BodyComponent from './Components/Body/BodyComponent.jsx';
 import './index.css';
 import restoData from './utils/mockData';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import Contact from './components/contact/Contact';
-import ErrorComponent from './components/ErrorComponent';
+import ContactPage from './components/contact/ContactPage.jsx';
+import ErrorComponent from './components/ErrorComponent.jsx';
 import RestaurantMenuPage from './components/RestaurentMenu/RestaurantMenuPage.jsx';
 
 /**
@@ -51,7 +51,7 @@ const appRouter = createBrowserRouter(
                 },
                 {
                     path: "/contact",
-                    element: <Contact />
+                    element: <ContactPage />
                 },
                 {
                     path: "/restaurents/:resId",
