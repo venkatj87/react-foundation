@@ -1,13 +1,13 @@
 import React, {lazy, Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
-import HeaderComponent from './components/header/HeaderComponent';
+import HeaderComponent from './Components/Header/HeaderComponent.jsx';
 import BodyComponent from './Components/Body/BodyComponent.jsx';
 import './index.css';
 import restoData from './utils/mockData';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import ContactPage from './components/contact/ContactPage.jsx';
-// import ErrorComponent from './components/ErrorComponent.jsx';
-import RestaurantMenuPage from './components/RestaurentMenu/RestaurantMenuPage.jsx';
+import ContactPage from './Components/contact/ContactPage.jsx';
+import ErrorComponent from './Components/ErrorComponent.jsx';
+import RestaurantMenuPage from './Components/RestaurentMenu/RestaurantMenuPage.jsx';
 
 /**
  * Header
@@ -22,7 +22,7 @@ import RestaurantMenuPage from './components/RestaurentMenu/RestaurantMenuPage.j
  *
  */
 
-const AboutUsComponent = lazy(() => import("./components/aboutus/AboutUsComponent.jsx"));
+const AboutUsComponent = lazy(() => import("./Components/aboutus/AboutUsComponent.jsx"));
 
 const AppComponent = () => {
     return (
@@ -39,7 +39,7 @@ const appRouter = createBrowserRouter(
         {
             path: "/",
             element: <AppComponent />,
-            // errorElement: <ErrorComponent />,
+            errorElement: <ErrorComponent />,
             children: [
                 {
                     path: "/",
