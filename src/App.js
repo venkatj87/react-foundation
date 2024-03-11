@@ -16,7 +16,7 @@ import RestaurantMenuPage from './components/RestaurentMenu/RestaurantMenuPage.j
  * Body
  * - Search item
  * - Food Item card component
- * Footer
+ * - Footer
  * - Copyrights
  * - Desclimer
  *
