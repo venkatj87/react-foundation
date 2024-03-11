@@ -6,7 +6,7 @@ import './index.css';
 import restoData from './utils/mockData';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import ContactPage from './components/contact/ContactPage.jsx';
-import ErrorComponent from './components/ErrorComponent.jsx';
+// import ErrorComponent from './components/ErrorComponent.jsx';
 import RestaurantMenuPage from './components/RestaurentMenu/RestaurantMenuPage.jsx';
 
 /**
@@ -39,7 +39,7 @@ const appRouter = createBrowserRouter(
         {
             path: "/",
             element: <AppComponent />,
-            errorElement: <ErrorComponent />,
+            // errorElement: <ErrorComponent />,
             children: [
                 {
                     path: "/",
