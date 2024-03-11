@@ -2,7 +2,6 @@ import React, {lazy, Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import HeaderComponent from './components/header/HeaderComponent';
 import BodyComponent from './Components/Body/BodyComponent.jsx';
-import FooterComponent from './components/footer/FooterComponet';
 import './index.css';
 import restoData from './utils/mockData';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
